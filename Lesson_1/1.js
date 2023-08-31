@@ -13,14 +13,12 @@
 Уточнение: пользователь всегда вводит корректное число.
 */
 
-  // Функция для преобразования температуры
-  function convertTemperature() {
-    let celsius = parseFloat(prompt("Введите температуру в градусах Цельсия:"));
-    let fahrenheit = (9 / 5) * celsius + 32;
-
-    // Вывод сообщения
-    alert(`Цельсий: ${celsius}°C, Фаренгейт: ${fahrenheit}°F`);
-  }
-
-  // Вызов функции при загрузке страницы
-  convertTemperature();
+// Функция для преобразования температуры
+function convertTemperature() {
+  let celsius = Number.parseFloat(prompt("Введите температуру в градусах Цельсия:"));
+  let fahrenheit = Math.round(((9 / 5) * celsius + 32) * 100) / 100;
+  // Вывод сообщения
+  alert(`Цельсий: ${celsius} °C, Фаренгейт: ${fahrenheit} °F`);
+}
+// Вызов функции при загрузке страницы
+convertTemperature();
