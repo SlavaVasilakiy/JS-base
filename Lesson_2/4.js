@@ -28,9 +28,6 @@ const userNumber = Number(prompt("Введите целое число:"));
 /**
  *
  * @param {number} number входящее целое число
- * @param hundreds количество сотен
- * @param dozens количество десятков
- * @param units количество единиц
  */
 function finder(number) {
   const hundreds = Math.trunc(number / 100) % 10;
