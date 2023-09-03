@@ -22,16 +22,15 @@ const dayNumber = Number(prompt("Введите целое число от 1 д�
  * @returns {number} номер декады месяца
  */
 function decade(day) {
-  if (day >= 1 && day <= 10) {
+  if (day <= 10) {
     return 1;
-  } else if (day >= 11 && day <= 20) {
+  } else if (day <= 20) {
     return 2;
-  } else {
-    return 3;
   }
+  return 3;
 }
 
-if (dayNumber < 1 || dayNumber > 31) {
+if (dayNumber < 1 || dayNumber > 31 || !Number.isInteger(dayNumber)) {
   alert("Неверное значение.");
 } else {
   alert(`Число ${dayNumber} попадает в ${decade(dayNumber)} декаду месяца.`);
