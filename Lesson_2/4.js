@@ -23,4 +23,23 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const userNumber = Number(prompt("Введите целое число:"));
+
+/**
+ *
+ * @param {number} number входящее целое число
+ * @param hundreds количество сотен
+ * @param dozens количество десятков
+ * @param units количество единиц
+ */
+function finder(number) {
+  const hundreds = Math.trunc(number / 100) % 10;
+  const dozens = Math.trunc(number / 10) % 10;
+  const units = number % 10;
+
+  alert(
+    `В числе ${userNumber} количество сотен: ${hundreds}, десятков: ${dozens}, единиц: ${units}`
+  );
+}
+
+finder(userNumber);

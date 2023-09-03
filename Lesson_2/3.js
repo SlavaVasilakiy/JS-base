@@ -14,4 +14,24 @@
 число 32.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const dayNumber = Number(prompt("Введите целое число от 1 до 31:"));
+
+/**
+ *
+ * @param {number} day целочисленное значение дня месяца
+ * @returns {number} номер декады месяца
+ */
+function decade(day) {
+  if (day <= 10) {
+    return 1;
+  } else if (day <= 20) {
+    return 2;
+  }
+  return 3;
+}
+
+if (dayNumber < 1 || dayNumber > 31 || !Number.isInteger(dayNumber)) {
+  alert("Неверное значение.");
+} else {
+  alert(`Число ${dayNumber} попадает в ${decade(dayNumber)} декаду месяца.`);
+}
