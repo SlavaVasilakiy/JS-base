@@ -12,10 +12,10 @@ const userNumber = Number(prompt("Введите число:"));
 /**
  *
  * @param {number} number входящее число
- * @returns число возведенное в куб
+ * @returns {number} число возведенное в куб
  */
 function cube(number) {
-  return Math.pow(number, 3);
+  return Math.pow(number, 3); // number ** 3
 }
 
 console.log(cube(userNumber));

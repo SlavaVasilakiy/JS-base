@@ -12,15 +12,15 @@
 const userNumber = Number(prompt("Введите число:"));
 
 /**
- * 
+ *
  * @param {number} number число - размер зарплаты до вычета
- * @returns число - зарплата после вычета 13%
+ * @returns {number} число - зарплата после вычета 13%
  */
 function salary(number) {
-  return number - number * 0.13;
+  return (number - number * 0.13).toFixed(2) / 1;
 }
 
-if (!Number.isInteger(userNumber)) {
+if (!Number.isFinite(userNumber)) {
   console.log("Значение задано неверно");
 } else {
   console.log(salary(userNumber));

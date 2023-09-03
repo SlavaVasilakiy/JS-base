@@ -26,9 +26,7 @@ function sum(num1, num2) {
 }
 
 function diff(num1, num2) {
-  if (num1 === num2) {
-    return 0;
-  }
+  // в задании прочитал условие что если равны, то вернуть 0, ну и написал условие бездумно )
   return num1 > num2 ? num1 - num2 : num2 - num1;
 }
 
@@ -37,7 +35,7 @@ function mult(num1, num2) {
 }
 
 function div(num1, num2) {
-  return Math.trunc((num1 / num2) * 100) / 100;
+  return num1 / num2;
 }
 
 alert(`Сумма равна ${sum(userNumber1, userNumber2)}

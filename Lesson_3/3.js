@@ -15,7 +15,7 @@
  * @param {number} num1
  * @param {number} num2
  * @param {number} num3
- * @returns максимальное из трёх чисел
+ * @returns {number} максимальное из трёх чисел
  */
 function maximum(num1, num2, num3) {
   return Math.max(num1, num2, num3);
