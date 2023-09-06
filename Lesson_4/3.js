@@ -13,6 +13,7 @@
 массиве тройки лежат под индексами 1 и 4. Если троек в сгенерированном массиве
 не окажется, значит нужно будет вывести пустой массив.
 */
+
 let array = [];
 
 /**
@@ -35,27 +36,43 @@ function arraySum(arr) {
 }
 
 /**
+ * Функция поиска максимального числа в массиве
+ * @param {array} arr массив
+ * @returns {number} максимальное число в массиве
+ */
+function arrayMax(arr) {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+/**
  * Функция создания нового массива с индексами содержащими цифру 3 из оригинального массива
  * @param {array} arr массив
- * @returns {array} массив, либо строку об отсутсвии цифры 3 в оригинальном массиве
+ * @returns {array} массив
  */
 function arrayOfThree(arr) {
-  let arrayOfThree = [];
+  const arrayOfThree = []; // я почему-то подумал, что если мы записываем в него значения, значит мы его изменяем, следовательно let
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 3) {
       arrayOfThree.push(i);
     }
   }
-  return arrayOfThree.length !== 0
-    ? arrayOfThree
-    : "There are no numbers 3 in the array :(";
+  return arrayOfThree;
 }
 
 arrayFill(array);
+const maxNumber = Math.max(array);
 
 console.log(`Original array: ${array}`);
 
-console.log(`Array sum = ${arraySum(array)}`);
+console.log(`Array summary = ${arraySum(array)}`);
+
+console.log(`The maximum number in the array is: ${arrayMax(array)}`);
 
 console.log(`Indexes in which the number 3 is located: ${arrayOfThree(array)}`);
